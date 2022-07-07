@@ -1,0 +1,33 @@
+
+######################### HOME ###########################
+
+home:
+  new_posts: true
+  new_posts_count_limit: 3
+  # 크기가 다른 img tag 사용
+  header_img_with_img_tag: false
+
+
+######################### About ###########################
+about:
+  # _data/owner.yml에 emial이 정의되어 있다면, true
+  show_email: false
+  # _data/owner.yml에 연락처가 정의되어 있다면, true
+  show_contacts: false
+  # to disable icon, comment below
+  #sub_title_icon: "fa fa-star"
+  # to disable icon, comment below
+  email_icon: "fa fa-envelope-o"
+  
+######################### Links ###########################
+
+links:
+  # to use row as a thumb to open the links, set to true, or to use a href links to open links, set to false.
+  # if you set to false, it also disables the hover background color change.
+  use_rows_as_link: true
+
+######################### Projects ###########################
+
+projects:
+  # if no picture is provided for projects list item, this fills with an empty picture for better look.
+  project_img_fill: true

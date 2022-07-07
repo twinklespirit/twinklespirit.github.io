@@ -1,0 +1,41 @@
+# 블로그 기본 요소
+
+# 소유자 개인 정보
+brand: twinkle spirit
+brand_sub_text: Little Star
+name: hyebin
+copyright_start_year: 2022
+email: hyebinnxa@gmail.com
+
+
+# make sure creative_commons.enable is true in _data/conf/main.yml file
+creative_commons:
+  # choose your license from https://creativecommons.org/choose/?lang=en
+  # then check link address below Selected License and make sure it matches with the list below
+
+  # 선택하기
+  # 1. by        Attribution 4.0 International
+  # 2. by-nd     Attribution-NoDerivatives 4.0 International
+  # 3. by-sa     Attribution-ShareAlike 4.0 International
+  # 4. by-nc     Attribution-NonCommercial 4.0 International
+  # 5. by-nc-nd  Attribution-NonCommercial-NoDerivatives 4.0 International
+  # 6. by-nc-sa  Attribution-NonCommercial-ShareAlike 4.0 International
+  license_type: "by-sa"
+
+# seo meta this is needed for each language
+# If meta_description is not defined in front matter, it's created from (post / page) content,
+# if it has no content, this will be used for page description. It is also used in manifest.json
+meta_common_description: 이 블로그는 &meta_info $site_brand 테마를 사용하였습니다.
+
+
+# Disqus Short name, make sure comments and disqus are enabled in _data/conf/posts.yml file
+disqus_shortname: "disqus_shortname: 이건 뭘까"
+
+# if no id is provided, this feature will be disabled.
+# make sure your environment does not match with google.analytics.ignore in _data/conf/main.yml
+google_analytics_id: "google_analytics_id: 이건 뭐지"
+
+# there are different ways to verify web page. One is adding this as meta into html.
+# make sure you set meta.google_site_verify: true in _data/conf/main.yml
+# make sure your environment does not match with google.site_verification.ignore in _data/conf/main.yml
+google_site_verification: "google_site_berification 이건 뭐야"

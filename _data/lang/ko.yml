@@ -1,0 +1,261 @@
+################################## 한국어 블로그 설정 파일 ###################################
+lng:
+  name: 한국어
+  # based on ISO_639-1 https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+  code: ko
+  # specifically needed for open-graph meta og:locale. if open_graph or html_lng_with_country_code not enabled in _data/conf/main.yml, it's not necessary.
+  # For html tags, you can enable or disable using html_lng_with_country_code defined in _data/conf/main.yml
+  # based on ISO_3166-1 https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+  country: KR
+  switch_title: 한국어
+  offer:
+    title: 언어
+    msg_page: 한국어로 보기
+    # if page translation is not available, use this.
+    msg_site: 한국어 홈페이지로
+
+date:
+  long: "%Y년%m월%d일"
+  day: "%d일"
+  year: "%Y년"
+  months: [1월, 2월, 3월, 4월, 5월, 6월, 7월, 8월, 9월, 10월, 11월, 12월]
+
+not_found:
+  header: 페이지를 찾을 수 없습니다.
+  line1: 요청한 페이지를 찾을 수 없습니다. 
+  line2: 메뉴 혹은 검색 기능을 사용해 보세요.
+
+no_translation_tooltip: 번역이 없습니다.
+
+navigation:
+  brand_sub_text: "Twinkle Little Star brand_sub_text"
+
+color_scheme_switch_tooltip: 야간 모드
+
+search:
+  placeholder: 검색
+  noResultText: 검색 결과가 없습니다.
+
+image_viewer:
+  load_error: 이미지를 불러올 수 없습니다.
+
+copyright:
+  additional_text: " 저작권으로 보호됩니다."
+
+creative_commons:
+  some_rights_reserved: 이건 무슨 말일까요。
+  # check _data/owner/[language].yml for license type.
+  by: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。
+  by-nd: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 - 改変禁止 4.0 国際 ライセンスの下に提供されています。
+  by-sa: 달리 명시하지 않는 한, 이 웹사이트의 콘텐츠는 크리에이티브 커먼즈 - 継承 4.0 国際 따라 사용이 허가됩니다。
+  by-nc: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 - 非営利 4.0 国際 ライセンスの下に提供されています。
+  by-nc-nd: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 - 非営利 - 改変禁止 4.0 国際 ライセンスの下に提供されています。
+  by-nc-sa: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンスの下に提供されています。
+
+# for 404 layout
+not-found:
+  title: "404"
+
+######################################## Layout ########################################
+# 참고
+  # title: <head><title>         </title></head>
+  # button_name: Layout에 있는 버튼 이름
+
+# HOME
+home:
+  title: 개요 # <head><title>부분
+  button_name: 개요
+
+  # you can use $brand in line1 and line2 to convert your site.data.owner.brand text
+  top_header_line1: 안녕하세요 
+  top_header_line2: twinkle spirit의 기술 블로그
+  new_posts_title: 새 게시글
+  new_posts_show_more_button: " 더 보기 ...  "
+
+# Post
+post:
+  read_time:
+    unit: "분"
+    text: "이면 충분합니다."
+    # c for char w for word
+    word_char: c
+    # char or words per minute
+    per_minute: 500
+  pager_buttons:
+    older_post: "← 이전 포스트"
+    newer_post: "다음 포스트 →"
+    first_post: 처음
+    last_post: 마지막
+  comments:
+    disqus:
+      count_title: Comments
+      noscript: 댓글을 보려면 Javasript를 활성화 하십시오
+      click_to_load: 댓글 불러오기
+      consent:
+        title: 댓글 (Disqus.com)
+        text: >
+          댓글 기능은 다른 회사에서 호스팅합니다. 外部コンテンツを表示することにより、disqus.comの$termsと$privacy_policyに同意したことになります。
+          <br>ターゲットを絞った広告をオプトアウトする場合は、$settings_linkを開き、「opt-out」ボタンをクリックして閉じます。 ここに戻ってコメントを表示してください。
+        terms_link_text: 서비스 약관
+        privacy_link_text: 개인정보 보호정책
+        settings_link_text: 이 링크
+        button:
+          load_once: 다음엔 보지 않기
+          load_and_do_not_ask_again: 항상 보기
+  table_of_contents:
+    heading: 목차
+    tooltip: 
+      move: 드래그하여 이동
+      close: 닫기
+  share:
+    heading: 공유
+    link_copied: 링크가 복사되었습니다
+    tooltip:
+      # keys need to match with _data/const/share.yml
+      twitter: Twitter
+      facebook: Facebook
+      telegram: Telegram
+      linkedin: LinkedIn
+      email: Email
+      copy_link: Copy link
+
+# Post-list
+post-list:
+  title: 글
+  button_name: 게시 글
+  upside_down_tabs: 
+    tab: 
+      all: All
+      categories: 카테고리
+      tags: 태그
+      years: 연도별
+      clear: Clear
+      close: 접기
+      tooltip:
+        clear: Clear
+        close: 접기
+    msg:
+      property_list:
+        # keys need to match with /query/post-query.json
+        tags: 태그
+        category: 카테고리
+        year: 연도별
+      # you can use these wildcards, {property} {value} {thumb}
+      resultFoundTitleFormat: "{property} : {thumb}"
+
+# Archives
+archives:
+  title: 역사
+  button_name: 블로그 역사
+  page_header: 블로그 기록 역사
+
+# Projects
+projects:
+  title: 프로젝트
+  button_name: 활동 프로젝트
+
+  read_more_text: 계속 읽기
+  read_less_text: 닫기
+
+# Links
+links:
+  title: URL 목록
+  button_name: 참고 사이트
+
+  link_text: 웹사이트
+  info_text: 설명
+
+# About
+about:
+  title: 정보
+  button_name: 작자 정보
+
+  email_title: e-mail
+  sub_title: 문의는 아래 아이콘을 누르시면 가능합니다. # $site_sample
+
+  
+########################################################################################
+
+# constants to be replaced for # 많이 사용될 것임---------------------------------
+auto_content:
+  brand: twinkle spirit
+  subtext: Little Star
+
+  greetings: lang>ko>auto_content>greetings 안녕하세요! # HOME 컨테이너 하단 **test**
+  auto_generated_text: twinkle spirit의 땅콩 블로그입니다. 무럭무럭 자라고 있습니다. 맨날 까먹어서 기록합니다.
+
+  welcome: "lang>ko>auto_content>welcome 반가워요 " # HOME 컨테이너 상단
+  sample: " " # HOME 컨테이너 하단 
+
+# for privacy-policy layout
+privacy-policy:
+  title: &privacy_policy_title 개인정보 보호정책
+  
+# for cookie consent
+cookie_consent:
+  privacy_policy_link_text: *privacy_policy_title
+  side_nav_setting_button_tooltip: &cookie_settings 쿠키 설정
+  panel_bar:
+    msg: >
+      웹사이트의 기능을 최적화하기 위해서는 쿠키가 필요해요!
+      방문자님이 승인해 주시면 작동해요 😊
+    privacy_msg: $privacy_link확인
+    buttons:
+      accept: &accept_button 모두 허용할게요
+      settings: 직접 지정할래요
+      deny: &deny_button 최적화하지 않는 불편함을 감수할게요
+  panel_settings:
+    title: *cookie_settings
+    msg: >
+      웹사이트의 기능을 최적화하기 위해 필요해요!
+      방문자님이 승인해 주시면 활성화 됩니다. 쿠기 정책은 각 항목을 클릭하면 보실 수 있습니다.
+    privacy_msg: $privacy_linkを確認する。
+    buttons:
+      accept: *accept_button
+      save: 선택 허용
+      deny: *deny_button
+    always_active: 항상 유효
+    consent_types:
+      necessary:
+        title: 필수 쿠키
+        info: >
+          이 쿠키는 Web 사이트에 필수적인 기능입니다. 비활성화할 수 없습니다.
+          通常、配色などのサイト機能を変更したときに設定されます。
+          このCookieには、個人を特定できる情報は保存されません。
+          $gtag_info
+      analytics:
+        title: 실적 쿠키
+        info: $gtag_info
+      preferences:
+        title: 기능성 쿠키
+        info: $gtag_info
+      advertising:
+        title: 맞춤형 광고 쿠키
+        info: $gtag_info
+    gtag_info:
+      # from https://support.google.com/tagmanager/answer/10718549#consent-types
+      ad_storage: >
+        広告に関連する保存（Cookie など）を有効にします。
+      analytics_storage: >
+        訪問時の滞在時間などの分析に関連する保存（Cookie など）を有効にします。
+      functionality_storage: >
+        Webサイトまたはアプリの機能（言語設定など）をサポートする保存を有効にします。
+      personalization_storage: >
+        おすすめの動画など、パーソナライズに関連する保存を有効にします。
+      security_storage: >
+        認証機能、不正行為防止、その他のユーザー保護など、
+        セキュリティに関連する保存を有効にします。
+
+# contact options (side nav bottom and about page)
+# the order of the items will be shown as here.
+# comment to remove any contact item
+contacts:
+  - github: "twinklespirit"
+  - email: "hyebinnxa@gmail.com"
+  - linkedin: ""
+  - twitter: ""
+  - instagram: ""
+  - youtube: ""
+  - facebook: ""
+# to add more, check the _data/const/contact.yml file
+#  - your_new_contact: ""

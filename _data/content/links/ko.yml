@@ -1,0 +1,67 @@
+---
+layout: links
+################################## 참고 사이트 필수 정보 설정 ##################################
+
+# 동일한 내용의 영어와 한국어 파일은 lng_pair(id)값 일치
+lng_pair: id_links
+# 작성 날짜 설정 (생략 가능) site.time 값으로 자동 설정
+#date: 
+# 제목과 버튼이름 설정 (생략 가능) _data/lang/[lng].yml 값으로 자동 설정
+#title: 
+#button_name: "My button"
+# 저자 설정 (생략 가능) _data/owner .name 값으로 자동 설정
+#author: 
+# _data/conf/main.yml의 side_and_top_nav_buttons 값으로 자동 설정
+#icon: "fa fa-bath"
+
+# seo (딱히 쓸 일 없을 것 같음)
+# 필수 정보 미설정 시 아래와 같이 설정될 예정
+#meta_modify_date: 2022-03-03 12:32:00 +0000
+# _data/owner.yml의 meta_description으로 자동 설절
+#meta_description: ""
+
+################################## 참고 사이트 기타 정보 설정 ##################################
+
+# image_viewer_posts = false 혹은 image_lazy_loader_posts = false인 경우에만 사용
+#image_viewer_on: true
+#image_lazy_loader_on: true
+
+# 사이트에서 검색하기 혹은 검색 엔진 제외 설정 
+#on_site_search_exclude: true
+#search_engine_exclude: true
+
+# 페이지 비활성화 설정 (혹은 삭제하면 됨)
+#published: false
+
+##########################################################################################
+
+page_data:
+  main:
+    header: 참고 사이트
+    info: 게시 글 작성에 참고한 사이트입니다.
+
+  # 카테고리 순서를 바꿀 수 있음 (List 순서는 변경할 필요가 없음)
+  category:
+    - title: 프로그래밍 언어
+      type: id_카테고리1
+      color: black
+    - title: 카테고리2
+      type: id_카테고리2
+      color: black
+
+  list:
+    -
+    - type: id_카테고리2
+      title: Google
+      url: https://www.google.com
+      info: 구글 사이트입니다.
+
+    - type: id_카테고리1
+      title: python3
+      url: https://docs.python.org/3/tutorial/
+      info: python3에 대한 기본적인 설명이에요
+    - type: id_카테고리1
+      title: 마크다운
+      url: https://www.markdownguide.org/tools/jekyll/
+      info: jekyll에서 마크다운 사용 가이드북이에요
+---
