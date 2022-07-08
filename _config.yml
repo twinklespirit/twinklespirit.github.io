@@ -73,6 +73,7 @@ defaults:
 highlighter: rouge
 markdown: kramdown
 kramdown:
+  input: GFM
   # This is default for GitHub Pages sites and cannot be changed.
   syntax_highlighter: rouge
 
