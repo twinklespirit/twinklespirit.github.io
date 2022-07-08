@@ -103,7 +103,8 @@ print(var_one)
 > 더 알아보기<br>
 > snake case: ‘뱀 처럼 생긴 _’로 단어를 구분 (Python) <span style="color:#BFBFBF">twinkle_little_star</span><br>
 > camel case: ‘낙~타’ 대소문자로 단어를 구분 (Java) <span style="color:#BFBFBF">twinkleLittleStar</span><br>
-> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style="color:#BFBFBF">TwinkleLittleStar</span><br>
+> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style="color:#BFBFBF">TwinkleLittleStar</span>
+
 <br> 
 <br>
 
@@ -123,7 +124,6 @@ b: int = 1
 def fn(c: int) -> bool:
 @@@
 ~~~
-
 <span style=“color:red”>주의!!</span>
 
 ~~~python
@@ -131,7 +131,9 @@ a: str = 1
 type(a) # <class ‘int’> 출력
 ~~~
 
-문자열로 선언하고 정수형을 할당하면, 정수형으로 변환되니 조심하세요! (동적 타이핑 언어 특징임~)<br> 
+문자열로 선언하고 정수형을 할당하면, 정수형으로 변환되니 조심하세요! (동적 타이핑 언어 특징임~)
+<br>
+<br> 
 
 * 리스트 컴프리헨션(List Comprehension)
     * 기존 리스트를 기반으로 새로운 리스트를 만들어 냅니다. (from python=2.0)
@@ -163,7 +165,6 @@ for key, value in original.items():
     a[key] = value
 ~~~
 <br> 
-<br>
 
 * 제너레이터(Generator)
     * 2001년 (from python=2.2)
@@ -271,6 +272,7 @@ for i, v in enumerate(A):
     * divmod(나누어질수, 나눌수): 몫과 나머지 출력
 <br>
 <br>
+<br>
 
 * print
     * 코딩 테스트에서 요긴함
@@ -339,6 +341,7 @@ c = MyClass()
 > 2. 리스트 컴프리헨션도 역할별로 줄 바꿈을 해주고 표현식은 2개 이하로 할 것
 > 3. 구글 파이썬 스타일 가이드를 참고할 것
 > 4. Import this를 참고할 것
+
 <br>
 <br>
 <br>
