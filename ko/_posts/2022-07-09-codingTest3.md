@@ -73,7 +73,7 @@ comments_disable: false
 이 책에서는 공식 인터프리터 CPython을 기준으로 합니다. (python= 3.7)
 
 ### 3.2 파이썬 문법
-여기서 소개하는 특징들로 코딩 테스트에서 생산성을 높여보자!
+코딩 테스트에서 내 코드 생산성을 높여보자!
 * 인덴트(indent)
     * 공식 가이드 PEP 8에 따라 공백 4칸이 원칙
     * 강제는 아니지만, 따르는 게 좋음
@@ -100,9 +100,9 @@ print(var_one)
     * IDE를 사용한다면, 알아서 알려줄 것임 “경고 경고! snake case로 pythonic way를 티내세요” 
 
 > 더 알아보기<br>
-> snake case: ‘뱀 처럼 생긴 _’로 단어를 구분 (Python) <span style="color:#F2A3B1">twinkle_little_star</span><br>
-> camel case: ‘낙~타’ 대소문자로 단어를 구분 (Java) <span style="color:#F2A3B1">twinkleLittleStar</span><br>
-> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style="color:#F2A3B1">TwinkleLittleStar</span>
+> snake case: ‘뱀 처럼 생긴 _’로 단어를 구분 (Python) <span style="color:#FF5277">twinkle_little_star</span><br>
+> camel case: ‘낙~타’ 대소문자로 단어를 구분 (Java) <span style="color:#FF5277">twinkleLittleStar</span><br>
+> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style="color:#FF5277">TwinkleLittleStar</span>
 
 <br>
 
@@ -142,7 +142,7 @@ type(a) # <class ‘int’> 출력
 ~~~python
 list(map(lamda x: x + 10, [1,2,3])) # [11,12,13] 출력
 
-############ 1부터 10사이의 홀수는 2를 곱하여 출력하기 #############
+############ 1부터 10사이의 홀수는 2를 곱하여 출력하기 ############
 # 1-1 리스트 컴프리헨션을 사용
 [n * 2 for n in range(1, 10+ 1) if n % 2 == 1] # [2, 6, 10, 14, 18] 출력 
 
@@ -152,7 +152,7 @@ for n in range(1, 10 + 1):
     if n % 2 == 1:
         a.append(n * 2)
     print(a) # [2, 6, 10, 14, 18] 출력
-######## 불필요한 리스트(a)를 만들어야 하고 코드도 길어졌어요 ###########
+######## 불필요한 리스트(a)를 만들어야 하고 코드도 길어졌어요 ########
 
 ####################### 딕셔너리 생성 #######################
 # 2-1 리스트 컴프리헨션을 사용
