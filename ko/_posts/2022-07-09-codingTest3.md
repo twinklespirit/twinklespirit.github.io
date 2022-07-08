@@ -37,9 +37,11 @@ comments_disable: false
 
 ---
 <!-- outline-start -->
+\[코딩테스트\] - 도저히 버틸 수가 없어서 정리했습니다.. 🌡️
 
 <!-- outline-end -->
-파이썬 알고리즘 인터뷰
+파이썬 알고리즘 인터뷰<br>
+
 95가지 알고리즘 문제 풀이로 완성하는 코딩 테스트 
 # 1부 코딩 인터뷰
 ## 1장 코딩 인터뷰
@@ -47,6 +49,11 @@ comments_disable: false
 ### 1.2 국내 기업의 코딩 테스트 플랫폼 활용 현황
 ### 1.3 온라인 코딩. 테스트의사전 준비사항
 ### 1.4 화이트보드 코딩 인터뷰 
+<br>
+<br>
+<br>
+<hr>
+
 ## 2장 프로그래밍 언어 선택
 ### 2.1 경진대화 통계로 알아본 언어 선호도
 ### 2.2 프로그래밍
@@ -54,7 +61,12 @@ comments_disable: false
 * 제네릭 프로그래밍
 * 구조체
 * 클래스
+
 ### 2.3 코딩 테스트에
+<br>
+<br>
+<br>
+<hr>
 
 # 2부 파이썬
 ## 3장 파이썬
@@ -89,10 +101,11 @@ print(var_one)
     * IDE를 사용한다면, 알아서 알려줄 것임 “경고 경고! snake case로 pythonic way를 티내세요” 
 
 > 더 알아보기<br>
-> snake case: ‘뱀 처럼 생긴 _’로 단어를 구분 (Python) <span style=“color:pink”>twinkle_little_star</span><br>
-> camel case: ‘낙~타’ 대소문자로 단어를 구분 (Java) <span style=“color:pink”>twinkleLittleStar</span><br>
-> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style=“color:pink”>TwinkleLittleStar</span><br>
+> snake case: ‘뱀 처럼 생긴 _’로 단어를 구분 (Python) <span style="color:#BFBFBF">twinkle_little_star</span><br>
+> camel case: ‘낙~타’ 대소문자로 단어를 구분 (Java) <span style="color:#BFBFBF">twinkleLittleStar</span><br>
+> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style="color:#BFBFBF">TwinkleLittleStar</span><br>
 <br> 
+<br>
 
 * 타입 힌트
     * 파이썬은 대표적인 동적 타이핑 언어지만, 타입을 지정하여 명시적으로 선언할 수 있음
@@ -111,12 +124,11 @@ def fn(c: int) -> bool:
 @@@
 ~~~
 
-<span style:“color=red”>주의!!</span>
+<span style=“color:red”>주의!!</span>
 
 ~~~python
 a: str = 1
 type(a) # <class ‘int’> 출력
-
 ~~~
 
 문자열로 선언하고 정수형을 할당하면, 정수형으로 변환되니 조심하세요! (동적 타이핑 언어 특징임~)<br> 
@@ -151,6 +163,7 @@ for key, value in original.items():
     a[key] = value
 ~~~
 <br> 
+<br>
 
 * 제너레이터(Generator)
     * 2001년 (from python=2.2)
@@ -162,7 +175,7 @@ for key, value in original.items():
     * 기존 함수에 비해 좋은 점은? 메모리가 엄청나게 절약됩니다!
 
 > 예를 들어 임의의 조건으로 숫자 1억 개를 만들고 계산을 해야 한다면?<br>
-> 숫자 1억 개를 어디에 보관해야하죠….? 내 메모리…<br>
+> 숫자 1억 개를 어디에 보관해야하죠….? 내 메모리…🥲<br>
 > 제너레이터는 메모리 부담 없이 필요할 때마다 숫자를 만들어 줍니다!<br> 
 
 ~~~python
@@ -257,11 +270,12 @@ for i, v in enumerate(A):
     * %: 나머지 (int 형)
     * divmod(나누어질수, 나눌수): 몫과 나머지 출력
 <br>
+<br>
 
 * print
     * 코딩 테스트에서 요긴함
     * 실무에서는 debugging 혹은 TDD 방식을 사용
-    * <span style=“color:red”>자동으로 줄바꿈을 해줌</span>
+    * <span style:“color=red”>자동으로 줄바꿈을 해줌</span>
 
 ~~~python
 # 1. 출력할 값을 (,)로 구분해주면, 한 칸 공백으로 출력됨
@@ -313,6 +327,8 @@ c = MyClass()
         * **import pprint**와 **pprint.pprit(locals())**를 이용하면 보기 좋은 코드 떡을 만들어 줌
     * 장점이 뭘까? 디버깅에 요긴함
 <br>
+<br>
+<br>
 
 ### 3.3 코딩 스타일
 채용을 위한 코딩 테스트에서, 코드의 품질은 중요하다. “왜 코드를 이렇게 작성했어요?” 등의 정성적인 질문에 답할 수 있어야 한다.
@@ -323,6 +339,10 @@ c = MyClass()
 > 2. 리스트 컴프리헨션도 역할별로 줄 바꿈을 해주고 표현식은 2개 이하로 할 것
 > 3. 구글 파이썬 스타일 가이드를 참고할 것
 > 4. Import this를 참고할 것
+<br>
+<br>
+<br>
+<hr>
 
 ## 4장 빅오, 자료형
 ### 4.1 빅오
