@@ -49,10 +49,6 @@ comments_disable: false
 ### 1.2 국내 기업의 코딩 테스트 플랫폼 활용 현황
 ### 1.3 온라인 코딩. 테스트의사전 준비사항
 ### 1.4 화이트보드 코딩 인터뷰 
-<br>
-<br>
-<br>
-<hr>
 
 ## 2장 프로그래밍 언어 선택
 ### 2.1 경진대화 통계로 알아본 언어 선호도
@@ -63,7 +59,6 @@ comments_disable: false
 * 클래스
 
 ### 2.3 코딩 테스트에
-<br>
 <br>
 <br>
 <hr>
@@ -101,11 +96,10 @@ print(var_one)
     * IDE를 사용한다면, 알아서 알려줄 것임 “경고 경고! snake case로 pythonic way를 티내세요” 
 
 > 더 알아보기<br>
-> snake case: ‘뱀 처럼 생긴 _’로 단어를 구분 (Python) <span style="color:#BFBFBF">twinkle_little_star</span><br>
-> camel case: ‘낙~타’ 대소문자로 단어를 구분 (Java) <span style="color:#BFBFBF">twinkleLittleStar</span><br>
-> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style="color:#BFBFBF">TwinkleLittleStar</span>
+> snake case: ‘뱀 처럼 생긴 _’로 단어를 구분 (Python) <span style="color:#F2A3B1">twinkle_little_star</span><br>
+> camel case: ‘낙~타’ 대소문자로 단어를 구분 (Java) <span style="color:#F2A3B1">twinkleLittleStar</span><br>
+> pascal case: 첫 시작 문자**도** 대문자로 표현 <span style="color:#F2A3B1">TwinkleLittleStar</span>
 
-<br> 
 <br>
 
 * 타입 힌트
@@ -124,7 +118,7 @@ b: int = 1
 def fn(c: int) -> bool:
 @@@
 ~~~
-<span style=“color:red”>주의!!</span>
+<span style=“color:#F20519”>주의!!</span>
 
 ~~~python
 a: str = 1
@@ -272,12 +266,11 @@ for i, v in enumerate(A):
     * divmod(나누어질수, 나눌수): 몫과 나머지 출력
 <br>
 <br>
-<br>
 
 * print
     * 코딩 테스트에서 요긴함
     * 실무에서는 debugging 혹은 TDD 방식을 사용
-    * <span style=“color:red”>자동으로 줄바꿈을 해줌</span>
+    * <span style=“color:#F20519”>자동으로 줄바꿈을 해줌</span>
 
 ~~~python
 # 1. 출력할 값을 (,)로 구분해주면, 한 칸 공백으로 출력됨
@@ -342,7 +335,6 @@ c = MyClass()
 > 3. 구글 파이썬 스타일 가이드를 참고할 것
 > 4. Import this를 참고할 것
 
-<br>
 <br>
 <br>
 <hr>
