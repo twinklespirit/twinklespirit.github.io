@@ -275,7 +275,7 @@ for i, v in enumerate(A):
 * print
     * 코딩 테스트에서 요긴함
     * 실무에서는 debugging 혹은 TDD 방식을 사용
-    * <span style:“color=red”>자동으로 줄바꿈을 해줌</span>
+    * <span style=“color:red”>자동으로 줄바꿈을 해줌</span>
 
 ~~~python
 # 1. 출력할 값을 (,)로 구분해주면, 한 칸 공백으로 출력됨
