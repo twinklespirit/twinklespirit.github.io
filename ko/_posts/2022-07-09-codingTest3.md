@@ -194,7 +194,6 @@ get_natural_number() # <generator object get_natural_number at 0x10d3139d0>
 g = get_natural_number()
 for _ in range(0, 100):
     print(next(g))
-###############################################################
 
 ################# 여러 개의 타입으로 제너레이터 생성 ##################
 def generator():
