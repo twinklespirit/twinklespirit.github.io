@@ -397,6 +397,7 @@ c = MyClass()
 <br>
 
 * 리스트 활용 방법
+
 ~~~python
 # 1. 리스트 선언
 a = list()
