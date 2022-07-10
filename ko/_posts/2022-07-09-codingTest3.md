@@ -94,7 +94,7 @@ print(var_one)
 
 * 네이밍 컨벤션(Naming Convention)
     * 파이썬의 변수, 함수명은 Snake Case를 따른다.
-    * 각 단어를 밑줄(_)로 구분 *<span style="color:#BFBFBF">- pythonic way~</span>*
+        * 각 단어를 밑줄(_)로 구분 *<span style="color:#BFBFBF">- pythonic way~</span>*
     * 출제자가 지키지 않았어도 제출자는 지켜주기
     * 면접관이 질문을 한다면? **“저는 PEP 8 및 철학에 따라 snake case 코딩을 지향합니다~”**
     * IDE를 사용한다면, 알아서 알려줄 것임 “경고 경고! snake case로 pythonic way를 티내세요” 
@@ -497,11 +497,87 @@ print(c) # [2, 3, 5, 4, True] 출력
 <hr>
 
 ## 9장 스택, 큐
+너~무 고전적인 자료구조라, 거의 모든 애플리케이션에 사용되었다.
+* 스택
+    * LIFO(**Last**-In-**First**-Out)
+    * '잔뜩 쌓아올린 접시를 꺼내보자!'
+    * 리스트가 스택의 모든 연산을 지원
+* 큐
+    * FIFO(**First**-In-**First**-Out)
+    * '놀이기구 타야하니깐 줄서보자!'
+    * 리스트가 큐의 모든 연산을 지원 (**성능을 위해서는 데크를 추천**)
+        * why? 리스트 동적 배열
+
+### 1. 스택
+* 주요 연산
+    * push(): 요소를 컬렉션에 추가
+    * pop(): 가장 마지막으로 삽입된 요소를 컬렉션에서 제거
+<br>
+
+* 기원
+    * 1946 앨런 튜링
+    * 서브루틴 호출하는 과정(bury), 되돌아오는 과정(unbury)
+    * 컴퓨터 서브루틴에 대한 정보를 저장하는 자료구조로 사용 (=> Call Stack)
+<br>
+
+* 
+* 연결리스트를 이용한 스택 ADT 구현 (ADT: Abstrack Data Type)
+
+~~~python
+# Define a class containing a linked list
+class Node:
+    # initialization function
+    def __init__(self, item, next):
+        self.item = item # node's value
+        self.next = next # pointer to the next node
+
+# Define a class that implements operations on the stack.
+class Stack:
+    def __init__(self):
+        self.last = None
+
+    # While adding an element to a linked list
+    def push(self, item):
+        # the last value is set to next
+        self.last = Node(item, self.last)
+    
+    # 마지막 아이템을 끄집어내고
+    def pop(self):
+        item = self.last.item
+        # last 포인터를 한 칸 앞으로 전진
+        self.last = self.last.next
+        return item
+~~~
+
+#### 문제 1. 유효한 괄호
+* 문제: 괄호로 된 입력값이 올바른지 판별하라.
+    * 입력: ()[]{}
+    * 출력: true
+<br>
+
+* 풀이: 
+    1. \(, \[, \{ 은 스택에 push
+    2. \), \], \} 은 스택에 pop
+
+
+
+#### 문제 2. 중복 문자 제거
+#### 문제 3. 일일 온도
+
+### 2. 큐
+#### 문제 1. 큐를 이용한 스택 구현
+#### 문제 2. 스택을 이용한 큐 구현
+#### 문제 3. 원형 큐 디자인
+
 <br>
 <br>
 <hr>
 
 ## 10장 데크, 우선순위 큐
+### 1. 데크
+#### 문제 1. 원형 데크 디자인
+### 2. 우선순위 큐
+#### 문제 2. K개 정렬 리스트 병합
 <br>
 <br>
 <hr>
