@@ -48,6 +48,7 @@ Vaild Palindrome
 
 ### 1. Problem 
 > A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.<br> Given a string s, return true if it is a palindrome, or false otherwise.
+
 <br><br>
 
 ### 2. Example and Constraints
@@ -83,6 +84,7 @@ Constraints:
     1. 기존 문자열을 리스트로 준비
     2. 리스트를 뒤집어서 준비
     3. 이 두개의 리스트가 같은지 비교
+<br><br>
 
 ### 4. Coding in Python3
 1. 리스트 자료구조를 이용하여 문제 해결
@@ -112,8 +114,10 @@ class Solution:
 2. 데크 자료형을 이용한 최적화
 
 3. 슬라이싱 이용
+<br><br>
 
 ### 5. Big O 
+<br><br><br><hr>
 
 ## Problem 2. Two Sum II
 ### 1. Problem 
@@ -126,11 +130,13 @@ Example 1:<br>
  
 Constraints:
 *  
+
 ### 3. Solution
 ### 4. Coding in Python3
 ~~~python 
 ~~~
 ### 5. Big O 
+<br><br><br><hr>
 
 ## Problem 3. 3Sum
 ### 1. Problem 
@@ -148,6 +154,7 @@ Constraints:
 ~~~python 
 ~~~
 ### 5. Big O 
+<br><br><br><hr>
 
 ## Problem 4. Container with Most Water
 ### 1. Problem 
@@ -165,6 +172,7 @@ Constraints:
 ~~~python 
 ~~~
 ### 5. Big O 
+<br><br><br><hr>
 
 ## Problem 5. Trapping Rain Water
 ### 1. Problem 
