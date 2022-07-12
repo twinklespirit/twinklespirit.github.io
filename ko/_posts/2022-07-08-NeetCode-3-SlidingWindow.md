@@ -2,18 +2,18 @@
 ################################### 게시 글 필수 정보 설정 ###################################
 
 # 동일한 내용의 영어와 한국어 파일은 lng_pair(id)값 일치
-lng_pair: id_leetcode
+lng_pair: id_neetcode_3
 # 제목 설정 (사용 언어로 작성)
-title: leetcode Vaild Palindrome
+title: NeetCode 3 - Sliding Window
 # 카테고리 설정 (1개)
-category: 취업준비 
+category: 개인공부
 # 태그 설정 ([태그1, 태그2, ...])
-tags: [leetcode] 
+tags: [leetcode, codingtest, python] 
 # 저자 설정 (생략 가능) _data/owner .name 값으로 자동 설정
 #author: 
 
 # 섬네일 이미지
-img:  
+img: "https://user-images.githubusercontent.com/105165938/178598444-7e958a6b-a0db-4455-9707-be20b7f87ab6.png"
 # 작성 날짜 설정 (YYYY-MM-DD HH:MM:SS +0900)
 date: 2022-07-06 10:30:00 +0900
 

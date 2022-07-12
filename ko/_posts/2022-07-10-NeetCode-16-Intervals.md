@@ -2,11 +2,11 @@
 ################################### 게시 글 필수 정보 설정 ###################################
 
 # 동일한 내용의 영어와 한국어 파일은 lng_pair(id)값 일치
-lng_pair: id_neetcode_5
+lng_pair: id_neetcode_16
 # 제목 설정 (사용 언어로 작성)
-title: NeetCode 5 - Binary-Search
+title: NeetCode 16 - Intervals
 # 카테고리 설정 (1개)
-category: 개인공부 
+category: 개인공부
 # 태그 설정 ([태그1, 태그2, ...])
 tags: [leetcode, codingtest, python] 
 # 저자 설정 (생략 가능) _data/owner .name 값으로 자동 설정
@@ -15,7 +15,7 @@ tags: [leetcode, codingtest, python]
 # 섬네일 이미지
 img: "https://user-images.githubusercontent.com/105165938/178598444-7e958a6b-a0db-4455-9707-be20b7f87ab6.png"
 # 작성 날짜 설정 (YYYY-MM-DD HH:MM:SS +0900)
-date: 2022-07-12 10:30:00 +0900
+date: 2022-07-10 10:30:00 +0900
 
 ################################### 게시 글 기타 정보 설정 ###################################
 # 댓글 비활성화 여부
@@ -37,12 +37,14 @@ comments_disable: false
 
 ---
 <!-- outline-start -->
-\[NeetCode\] - 5. Binary Search
+\[NeetCode\] - 4. Stack
 <!-- outline-end -->
 
 
 ## Problem 1. Valid Parentheses
 ### 1. Problem
+> Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. <br> An input string is valid if:<br>   1. Open brackets must be closed by the same type of brackets.<br>   2. Open brackets must be closed in the correct order.
+
 ### 2. Example and Constraints
 Example 1:<br>
 Input: s = "()"<br>
@@ -185,54 +187,3 @@ class Solution:
 ## Problem 5. Minimum Window Substring (Hard)
 
 ## Problem 6. Sliding Window Maximum (Hard)
-
-## Problem 8. Find Median of Two Sorted Arrays (Hard)
-### 1. Problem
-> Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.<br> The overall run time complexity should be O(log (m+n)).
-
-### 2. Example and Constraints
-Example 1:<br>
-* Input: nums1 = [1,3], nums2 = [2]
-* Output: 2.00000
-* Explanation: merged array = [1,2,3] and median is 2.<br><br>
-
-
-Example 2:<br>
-* Input: nums1 = [1,2], nums2 = [3,4]
-* Output: 2.50000
-* Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.<br><br>
-
-Constraints:<br>
-* nums1.length == m
-* nums2.length == n
-* 0 <= m <= 1000
-* 0 <= n <= 1000
-* 1 <= m + n <= 2000
-* -106 <= nums1[i], nums2[i] <= 106
-
-### 3. Solution
-To solve the problem, understanding the nature of the median is very important. One of the characteristics of the median is that dividing a set into two sets, the set of lower elements, the set of higher elements. 
-<br>
-Each array has elements included a lower set or higher set simultaneously like this. 
-<br>
-left_part is the lower element set and right_part is the higher element set. Using this feature, we can deduce the following formula
-<br>
-left_part's size and right_part's size are equal. There is no doubt. The second formula is obvious because left_part's elements are always less than the right_part's
-<br>
-
-
-### 4. Coding in Python3
-~~~python
-class Solution:
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float: 
-        # 1. sort two list
-         merged_mn = nums1 + nums2
-         sorted_mn = merged_mn.sort()
-         # 2. check the len of sorted_mn
-         len_mn = len(len_mn)
-         # 3. center value
-         center = sorted_mn(len_mn)
-
-
-~~~
-### 5. Big O 
