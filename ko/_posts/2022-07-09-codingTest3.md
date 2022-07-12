@@ -122,7 +122,8 @@ b: int = 1
 def fn(c: int) -> bool:
 @@@
 ~~~
-<p style="color:red";> 주의!!</p>
+
+<span style="color:red"> 주의!!</span>
 
 ~~~python
 a: str = 1
