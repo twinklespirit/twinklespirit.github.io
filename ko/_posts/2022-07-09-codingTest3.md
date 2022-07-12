@@ -239,10 +239,13 @@ B = range(10000) # range만 생성
 ~~~python
 # 1. enumerate() 사용해보기
 A = [1,2,3,4,5,6]
-print(A) # [1, 2, 3, 4, 5, 6] —> 리스트를 그대로 출력
+print(A)                 # [1, 2, 3, 4, 5, 6] —> 리스트를 그대로 출력
 
-B = list(enumerate(A))
-print(B) # [(0, 1), (1, 2), (2, 3), (4, 5), (5, 6)] —> 리스트에 인덱스를 포함하여 출력
+B = enumerate(A)
+print(B)                 # <enumerate object at 0x10a964400> 출력
+
+C = list(enumerate(A))
+print(C)                 # [(0, 1), (1, 2), (2, 3), (4, 5), (5, 6)] —> 리스트에 인덱스를 포함하여 출력
 
 # 2. enumerate()가 얼마나 효과적인지 살펴보기
 A = ["a1", "a2", "a3"]
@@ -278,7 +281,7 @@ for i, v in enumerate(A):
 
 ~~~python
 # 1. 출력할 값을 (,)로 구분해주면, 한 칸 공백으로 출력됨
-print("A1", "B2") # A1, B2 출력 
+print("A1", "B2") # A1 B2 출력 
 
 # 2. sep 파라미터를 이용하여 구분자를 (,)로 지정할 수 있음
 print("A1", "B2", sep=",") # A1, B2 출력
@@ -289,9 +292,10 @@ print("B2") # A1 B2 출력
 
 # 4. join()으로 묶어서 리스트를 출력
 A = ["A", "B"]
+print(A)           # ['A', 'B'] 출력
 print(" ".join(A)) # A B 출력 
 
-# 5. 연산하여 출력
+# 5. 변수가 연산하며 동시에 출력하는 
 A = 1
 B = "apple"
 
@@ -299,8 +303,8 @@ B = "apple"
 print("{0}: {1}".format(A + 1, B)) # 2: apple 출력
 print("{}: {}".format(A + 1, B)) # 2: apple 출력
 
-# 5.2 f-string 이용
-print(f"{A + 1}: {B}") # 2: apple 출력 — python=3.6 이상만 지원 —> 얘를 기억할 것!
+# 5.2 f-string 이용 —> 〰️ 얘를 기억할 것!
+print(f"{A + 1}: {B}") # 2: apple 출력 — python=3.6 이상만 지원 
 ~~~
 <br> 
 
@@ -337,6 +341,42 @@ c = MyClass()
 > 1. 변수명은 snake_case, 주석은 영어로 작성할 것
 > 2. 리스트 컴프리헨션은 역할별로 줄 바꿈을 해주고 표현식은 2개 이하로 할 것
 > 3. 구글 파이썬 스타일 가이드를 참고할 것
+>> * 함수의 기본 값으로 가변 객체(Mutable Object)를 사용하지 않아야 한다.
+
+    ~~~python
+        # 가변 객체: [], {}
+        def foo(a, b=[]): # 이런 거 하지 말라는 거임
+        def foo(a, b: Mapping={}): # 이것도 마찬가지임
+
+        # 분병 객체
+        def goo(a, b=None):
+            if b is None:
+                b = []
+        def goo(a, b: Optional[Sequence] = None):
+            if b is None:
+                b = []
+    ~~~
+
+>> * True, False는 암시적인(Implicit) 방법을 사용하는 것이 가독성을 높여준다.
+
+    ~~~python
+        # 가독성이 좋음
+        if not 학생:
+            print('학생은 아님')
+        if money == 0:
+            self.handle_zero()
+        if i % 10 == 0:
+            self.handle.multiple_of_ten()
+
+        # 가독성이 좋진 않음
+        if len(학생) == 0:
+            print('학생은 아님')
+        if money is not None and not money:
+            self.handle_zero()
+        if not i % 10:
+            self.handle_multiple_of_ten()
+    ~~~
+
 > 4. import this를 참고할 것
 
 <br>
@@ -346,7 +386,9 @@ c = MyClass()
 ## 4장 빅오, 자료형
 
 ### 4.1 빅오
-**big-O**는 아~주 중요하니깐 꼭! 이해해야 합니다. 간단히 요약하면, 입력값이 커질 때 알고리즘 실행 시간과 메모리 사용 크기가 어떻게 증가하는지 알려줍니다.
+**big-O**는 아~주 중요하니깐 꼭! 이해해야 합니다. 
+> 🗣 빅오는 입력값이 커질 때 알고리즘 실행 시간과 메모리 사용 크기가 어떻게 증가하는지 알려줍니다.
+
 * 시간 복잡도(Time Complexity)
 * 공간 복잡도(Space Complexity)
 
@@ -385,7 +427,7 @@ c = MyClass()
     * O(k)
         * a[i : j]: i부터 j까지 슬라이스의 길이만큼만 k개의 요소를 리턴
     * O(n)
-        * elem in a: elem 요소가 존재하는지 순차적으로 확인하여
+        * elem in a: elem 요소가 존재하는지 순차적으로 확인
         * a.count(elem): elem 요소가 몇 개 존재하는지 리턴
         * a.index(elem): elem 요소의 인덱스를 리턴
         * a.pop(0): 리스트의 첫번째 요소를 추출 *queue 연산이라 전체 복사가 이루어짐*
@@ -479,8 +521,60 @@ print(c) # [2, 3, 5, 4, True] 출력
 <br>
 <hr>
 
-## 6장 문자열 조작
+# -------------------------- 오늘 여기까진 할 거임!! ----------------------------------
 
+## 6장 문자열 조작(String Manipulation)
+문자열을 변경하거나 분리하는 등의 여러 과정을 말합니다. **코딩 테스트와 실무에서 많이 사용되니깐!** 기본 기능들을 잘 숙지하자!
+
+> 어디서 사용될까?<br>
+> 정보처리 분야, 통신 시스템 분야, 프로그래밍 시스템 분야.. 아~주 많음!<br>
+> 숙지해야 할 부분: 문자열 자료형을 위해 어떤 기능이 제공되고 이것들을 이용해서 어떻게 처리할 것인지~
+
+#### 문제 1. 유효한 펠린드롬
+주어진 문자열이 팰린드롬인지 확인하라. 대소문자를 구분하지 않으며, 영문자와 숫자만을 대상으로 한다.
+
+1. 리스트 자료구조를 이용하여 문제 해결
+
+~~~python 
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s_lower = s.lower()
+        s_alnum = [] 
+        for char in s_lower:        
+            if char.isalnum():      
+                s_alnum.append(char) 
+        
+        s_reversed = s_alnum[::-1]
+        if s_alnum == s_reversed:
+            return true
+        else:
+            return false
+       
+~~~
+
+2. 데크 자료형을 이용한 최적화
+
+~~~python 
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+              
+~~~
+
+3. 슬라이싱 이용
+
+~~~python 
+class Solution:
+    def isPalindrome(self, s: str) -> bool: 
+       
+~~~
+
+#### 문제 2. 문자열 뒤집기
+#### 문제 3. 로그 파일 재정렬
+#### 문제 4. 가장 흔한 단어
+#### 문제 5. 그룹 애너그램
+### 1. 여러 가지 정렬 방법
+#### 문제 6. 가장 긴 팰린드롬 부분 문자열
+### 2. 유니코드와 UTF-8
 <br>
 <br>
 <hr>
