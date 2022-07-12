@@ -43,7 +43,7 @@ copyright:
   additional_text: " 저작권으로 보호됩니다."
 
 creative_commons:
-  some_rights_reserved: 이건 무슨 말일까요。
+  some_rights_reserved: Some rights reserved. #<footer container>
   # check _data/owner/[language].yml for license type.
   by: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。
   by-nd: 特に明記されていない限り、このWebサイトのコンテンツはクリエイティブ・コモンズ 表示 - 改変禁止 4.0 国際 ライセンスの下に提供されています。
@@ -63,7 +63,7 @@ not-found:
 
 # HOME
 home:
-  title: 개요 # <head><title>부분
+  title: 반가워요😊 # <head><title>부분
   button_name: 개요
 
   # you can use $brand in line1 and line2 to convert your site.data.owner.brand text
@@ -198,7 +198,7 @@ cookie_consent:
   panel_bar:
     msg: >
       웹사이트의 기능을 최적화하기 위해서는 쿠키가 필요해요!
-      방문자님이 승인해 주시면 작동해요 😊
+      방문자님이 승인해 주시면 작동해요😊
     privacy_msg: $privacy_link확인
     buttons:
       accept: &accept_button 모두 허용할게요
