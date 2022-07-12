@@ -4,10 +4,10 @@ source "https://rubygems.org"
 #gem "jekyll", "~> 3.9.0", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-# group :jekyll_plugins do
-#   gem "jekyll-paginate", "~> 1.1.0"
-#   gem "jekyll-redirect-from", "~> 0.16.0"
-# end
+group :jekyll_plugins do
+   gem "jekyll-paginate", "~> 1.1.0"
+   gem "jekyll-redirect-from", "~> 0.16.0"
+ end
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -26,5 +26,5 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 
 # HTTP server for local tests
 gem "webrick", "~> 1.7"
-
-gem "jekyll-roman"
+gem 'jekyll-roman', '~> 0.0.3'
+gem 'rake', '>=0.9.2'

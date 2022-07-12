@@ -83,7 +83,6 @@ kramdown:
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-roman
 
 # since GitHub Pages runs jekyll with "--safe" flag, we need to add supported plugins in here. (only github supported plugins are allowed)
 whitelist:
@@ -137,7 +136,7 @@ sass:
   # enable css compression
   style: compressed
 
-gems:
+plugins:
   - jekyll-roman
 
 ###########################################################
