@@ -341,23 +341,26 @@ c = MyClass()
 > 1. 변수명은 snake_case, 주석은 영어로 작성할 것
 > 2. 리스트 컴프리헨션은 역할별로 줄 바꿈을 해주고 표현식은 2개 이하로 할 것
 > 3. 구글 파이썬 스타일 가이드를 참고할 것
->> * 함수의 기본 값으로 가변 객체(Mutable Object)를 사용하지 않아야 한다.
+> 4. import this를 참고할 것
+
+**구글 파이썬 스타일에서 기억하면 좋을 두 가지입니다.**
+1. 함수의 기본 값으로 가변 객체(Mutable Object)를 사용하지 않아야 한다.
 
     ~~~python
         # 가변 객체: [], {}
-        def foo(a, b=[]): # 이런 거 하지 말라는 거임
-        def foo(a, b: Mapping={}): # 이것도 마찬가지임
+        def foo(a, b=[]):                         # X
+        def foo(a, b: Mapping={}):                # X
 
         # 분병 객체
-        def goo(a, b=None):
+        def goo(a, b=None):                       # O
             if b is None:
                 b = []
-        def goo(a, b: Optional[Sequence] = None):
+        def goo(a, b: Optional[Sequence] = None): # O
             if b is None:
                 b = []
     ~~~
 
->> * True, False는 암시적인(Implicit) 방법을 사용하는 것이 가독성을 높여준다.
+ 2. True, False는 암시적인(Implicit) 방법을 사용하는 것이 가독성을 높여준다.
 
     ~~~python
         # 가독성이 좋음
@@ -376,8 +379,6 @@ c = MyClass()
         if not i % 10:
             self.handle_multiple_of_ten()
     ~~~
-
-> 4. import this를 참고할 것
 
 <br>
 <br>
@@ -544,12 +545,11 @@ class Solution:
             if char.isalnum():      
                 s_alnum.append(char) 
         
-        s_reversed = s_alnum[::-1]
-        if s_alnum == s_reversed:
-            return true
-        else:
-            return false
-       
+        while len(strs) > 1:
+            if s_alnum.pop(0) != strs.pop():
+                return False
+
+        return True
 ~~~
 
 2. 데크 자료형을 이용한 최적화
