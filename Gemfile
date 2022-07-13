@@ -1,13 +1,25 @@
+# after "$ gem instll bundler"
 source "https://rubygems.org"
+
+# specify my denpendencies
+gem 'nokogiri'
+# gem 'rack', '~> 2.0.1'
+# gem 'rspec'
+
+# input to solve "cannot load such file -- ssasc (LoadError"
+# https://github.com/sass/sassc-rails/issues/114
+gem 'sassc-rails'
+gem 'rails', 
+gem 'jekyll-roman'
 
 # if you are using other than GitHub Pages,
 #gem "jekyll", "~> 3.9.0", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-paginate", "~> 1.1.0"
-   gem "jekyll-redirect-from", "~> 0.16.0"
- end
+#group :jekyll_plugins do
+#   gem "jekyll-paginate", "~> 1.1.0"
+#   gem "jekyll-redirect-from", "~> 0.16.0"
+# end
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -26,5 +38,4 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 
 # HTTP server for local tests
 gem "webrick", "~> 1.7"
-gem 'jekyll-roman', '~> 0.0.3'
 gem 'rake', '>=0.9.2'

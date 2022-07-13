@@ -45,7 +45,10 @@ comments_disable: false
 다국적 언어 블로그라는 명분으로 화딱지가 나게 해도 공들여 닦아줬네요. .yml, .html, .json, .md, liquid까지 난잡하고, 특히 이미지 경로가 어지러워요. 이런 건 직접 제품 생산 과정에 참여하고 싶은 Z세대 혹은 프론트엔드 개발자에게 추천합니다.  
 
 **jeykll 사용방법**을 알아보겠습니다.
-
+* Jekyll은 무엇일까요?
+    * a static site generator
+    * application written in ruby
+    
 ## 1. 폴더 구조
 매~우 꼼꼼하게 폴더를 뜯어보았습니다. 
 
