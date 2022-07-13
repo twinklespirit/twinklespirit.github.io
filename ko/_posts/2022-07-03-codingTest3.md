@@ -397,8 +397,8 @@ c = MyClass()
         * 이진 검색
     * O(n): 
     * O(n log n)
-    * O($$n^2$$)
-    * O($$2^$$)
+    * O(n^2)
+    * O(2^)
 * 공간 복잡도(Space Complexity)
 
 * 상한과 최악
