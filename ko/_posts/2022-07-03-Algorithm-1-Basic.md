@@ -21,6 +21,9 @@ date: 2022-07-09 3:00:00 +0900
 # 댓글 비활성화 여부
 comments_disable: false
 
+# Mathjax 사용
+use_math: true
+
 # image_viewer_posts = false 혹은 image_lazy_loader_posts = false인 경우에만 사용
 #image_viewer_on: true
 #image_lazy_loader_on: true
@@ -423,48 +426,61 @@ c = MyClass()
 
 * 등장 배경
     * (수학) 점근적 실행 시간(Asymptotic Running Time)
-    👽마크다운에서 수학 수식
-    * lim n->무한대, f(n)의 실행시간 추이
-    * <span style="color:#ff7f33">컴퓨터에게 n은 입력값을 뜻함</span>
+    * $lim_{n\rightarrow\infty}f(n)$ 의 실행시간 추이
+    * <span style="color:#ff7f33">컴퓨터에게 n은 입력값의 크기를 뜻함</span> 
 
 > 예를 들어 살펴보자.<br>
-> 제주도에서 N 엑사바이트의 파일을 인천으로 보내야 한다. (N: 0 이상의 실수)
+> 제주도에서 N 엑사바이트 용량의 데이터가 담긴 파일 디스크를 인천으로 보내야 한다. (N: 0 이상의 실수)
 > N이 1일 때와 N이 1,000일 때의 송신 시간을 비교해보자.
-> 1. 비행기: N(1) == N(1,000): 파일이 있는 메모리를 담고 가면 됨 => 언제나 동일한 시간 O(1)
+> 1. 비행기: N(1) == N(1,000): 파일 디스크를 담고 가면 됨 => 언제나 동일한 시간 O(1)
 > 2. 메일: N(1) <<< N(1,000): 1,000 엑사바이트 보내려면... 엄..청..오래..걸림 => N크기에 영향을 받음 O(n) 🌱 네트워크 상에서 파일이 전송되는 속도, 프로세스 공부해보자~<br>
 > ![img_31](https://user-images.githubusercontent.com/105165938/178879960-c22acd16-fca7-47e0-ac28-b3b4e338e3e6.png)<br>*이미지 출처: 파이썬 알고리즘 인터뷰, 100p*
 
-![img_30](https://user-images.githubusercontent.com/105165938/178868105-82b68981-943f-4084-95da-f2c89741a261.png)<br>
-*© 이미지 출처: https://velog.io/@qksud14/Algorithm-BigO*<br>
+<br>
+
+
 
 ####  시간 복잡도 == 점근적 실행 시간
-* 어떤 algorithm이 수행하는데 걸리는 시간을 설명하는 계산 복잡도
-    * 계산 복잡도: Big-O
+* 어떤 algorithm이 수행하는데 걸리는 시간을 설명하는 계산 복잡도(Computational Complexity)
+    * 계산 복잡도: Big-O로 표기
 
 <br>
 
 * 시간 복잡도 표현 방법
     1. 최고차항만 표기
     2. 상수항은 무시
-    * 예시 👽마크다운에서 수학 수식 (7n^2 + 3n + 99999)의 big-O = O(n^2)으로 추이
+    * $7n^2 + 3n + 99999$의 Big-O = $O(n^2)$으로 추이
 
 <br>
 
-> 🗣 아하! Big-O는 입력값에 따른 알고리즘의 수행 시간의 추이를 살피는 거네요!
+> 🗣 Big-O는 입력값에 따른 알고리즘의 수행 시간의 추이를 살피네요!
 
 * 시간 복잡도 종류<br>
-    ![img_32](https://user-images.githubusercontent.com/105165938/178882692-c336bf83-8eb1-4ea4-ae82-824908f77c65.png)<br>*© 이미지 출처: https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.velog*<br>
-    입력값의 크기와 상관 없음<br>
-        👽마크다운에서 수학 수식<br>
-    * O(1): 입력값이 아무리 크더라도 실행 시간은 일정 (해시 테이블) [11장]() 👽마크다운에서 동일한 마크 다운으로 하이퍼링크
+    ![img_32](https://user-images.githubusercontent.com/105165938/178882692-c336bf83-8eb1-4ea4-ae82-824908f77c65.png)<br>*© 이미지 출처: https://velog.io/@qksud14/Algorithm-BigO*<br>
 
     <br>
 
-    입력값의 크기가 영향을 줌<br>
+    1. 입력값의 크기와 상관 없음<br>
+    * O(1): 입력값이 아무리 크더라도 실행 시간은 일정 (해시 테이블) [11장](#11장-해시-테이블)
+    
+    <br>
+
+    2. 입력값의 크기가 영향을 줌<br>
     * O(log n): 입력값이 아무리 크더라도 영향을 크게 받진 않음 (이진 검색) [18장]()
-    * O(n): 입력값의 크기 만큼 실행시간도 비례 (선형시간) 
+    * O(n): 입력값의 크기 만큼 실행시간도 비례하게 커짐 (선형시간 Linear-time algorithm)
         * 정렬되지 않은 리스트에서 최댓값, 최솟값 구하기
-    * O(n log n): "대부분의 효율 좋은 알고리즘이 해당됩니다" 
+        * 모든 입력값을 적어도 한 번 이상 확인해야 함
+    * O(n log n): "대부분의 효율 좋은 알고리즘이 해당됩니다"
+        * '적어도 모든 수를 한 번 이상 비교'
+        
+
+
+
+
+
+        * 정렬되지 않은 리스트에서 최댓값, 최솟값 구하기
+        * 모든 입력값을 적어도 한 번 이상 확인해야 함
+    * O(n log n): "대부분의 효율 좋은 알고리즘이 해당됩니다"
         * '적어도 모든 수를 한 번 이상 비교'
     * O(n^2): 
     * O(2^): 피보나치, 재귀 알고리즘
