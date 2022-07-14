@@ -37,71 +37,45 @@ comments_disable: false
 
 ---
 <!-- outline-start -->
-\[NeetCode\] - 4. Stack
+\[NeetCode\] - 6. Linked List
 <!-- outline-end -->
 
 
 ## Problem 1. Valid Parentheses
 ### 1. Problem
-> Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. <br> An input string is valid if:<br>   1. Open brackets must be closed by the same type of brackets.<br>   2. Open brackets must be closed in the correct order.
+> Given the head of a singly linked list, reverse the list, and return the reversed list.
 
 ### 2. Example and Constraints
 Example 1:<br>
-Input: s = "()"<br>
-Output: true<br><br>
+![img_26](https://user-images.githubusercontent.com/105165938/178829795-df07b91b-98f6-4565-9d3b-5bd26841876d.png)
+Input: head = [1,2,3,4,5]<br>
+Output: [5,4,3,2,1]<br><br>
 
 Example 2:<br>
-Input: s = "()[]{}"<br>
-Output: true<br><br>
+![img_27](https://user-images.githubusercontent.com/105165938/178829842-6052a320-2d95-47f5-a9bf-3a62eb65cc1a.png)
+Input: head = [1,2]<br>
+Output: [2,1]<br><br>
 
-Example 2:<br>
-Input: s = "(]"<br>
-Output: false<br><br>
+Example 3:<br>
+Input: head = []<br>
+Output: []<br><br>
 
 Constraints:<br>
-* 1 <= s.length <= 104
-* s consists of parentheses only '()[]{}'
+* The number of nodes in the list is the range [0, 5000].
+* -5000 <= Node.val <= 5000
 
 ### 3. Solution
-First, let me summarize. 
-1. when \(, \[, \{ is entered, push them onto the stack and # when이 맞아요? if가 맞아요?
-2. when \), \], \} is entered, pop
-3. Check that the result matches the mapping table result.
-    * (A) mapping table: (is) a dictionary data structure made up of keys and values.
-    * We remove the character inserted into the list if it is the same as the key of the table.
-    * We will compare the remaining character in the list with the value that correspond to key in the table.
-    1. Create the mapping table and
-    2. pushes it unconditionally if it does not exist in the table and
-    3. returns False if the result does not match when popped.
 
 ### 4. Coding in Python3
-~~~python
-class Solution:
-    def isValid(self, s: str) -> bool:
-        # declare a list named "stack" which provides operations available on stack
-        stack = [] # storing elements in order (dynamic array)
-        # create a function named "mapping table" which compares characters inputed to keys
-        mapping_table = {
-            ')':'(',
-            '}':'{',
-            ']':'['
-        }
 
-        # loop through the string named "s" by using a for loop
-        for bracket in s:
-            # if there is no bracket in table(key: '), }, ]')
-            if bracket not in table:
-                # append brackets in stack
-                stack.append(bracket)
-            # the bracket is on the table
-            # compare bracket to value correspond to key 
-            # if not the same
-            elif not stack or table[bracket] != stack.pop():
-                # return False
-                return False
-        
-        # exception handling: 예를들어 '['가 입력될 때도 true를 출력해 줘야 함
-        return len(stack) == 0 # Return True if the stack length is 0
+~~~python
+class ListNode:
+     def __init__(self, val=0, next=None):
+         self.val = val
+         self.next = next
+            
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
 ~~~
 
 ### 5. Big O 
