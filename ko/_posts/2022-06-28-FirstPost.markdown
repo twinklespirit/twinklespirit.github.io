@@ -13,7 +13,7 @@ tags: [기타, jeykll]
 #author: 
 
 # 섬네일 이미지
-img: ":jekyll.png" 
+img: "https://user-images.githubusercontent.com/105165938/179060515-34d353b5-f1df-4115-bd24-46ffedb529c3.png" 
 # 작성 날짜 설정 (YYYY-MM-DD HH:MM:SS +0900)
 date: 2022-06-28 18:47:35 +0900 
 

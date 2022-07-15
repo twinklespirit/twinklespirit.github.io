@@ -9,7 +9,7 @@ gem 'nokogiri'
 # input to solve "cannot load such file -- ssasc (LoadError"
 # https://github.com/sass/sassc-rails/issues/114
 gem 'sassc-rails'
-gem 'rails', 
+gem 'rails'
 gem 'jekyll-roman'
 
 # if you are using other than GitHub Pages,

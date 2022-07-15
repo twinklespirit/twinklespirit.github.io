@@ -15,7 +15,7 @@ tags: [leetcode, codingtest, python]
 # 섬네일 이미지
 img: "https://user-images.githubusercontent.com/105165938/178598444-7e958a6b-a0db-4455-9707-be20b7f87ab6.png"
 # 작성 날짜 설정 (YYYY-MM-DD HH:MM:SS +0900)
-date: 2022-07-12 10:30:00 +0900
+date: 2022-07-12 22:00:00 +0900
 
 ################################### 게시 글 기타 정보 설정 ###################################
 # 댓글 비활성화 여부

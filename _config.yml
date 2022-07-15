@@ -136,9 +136,6 @@ sass:
   # enable css compression
   style: compressed
 
-plugins:
-  - jekyll-roman
-
 ###########################################################
 # Exclude these files or folders from production site
 ###########################################################
