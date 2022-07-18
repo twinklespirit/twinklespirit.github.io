@@ -2,9 +2,9 @@
 ################################### 게시 글 필수 정보 설정 ###################################
 
 # 동일한 내용의 영어와 한국어 파일은 lng_pair(id)값 일치
-lng_pair: id_datastructure_2
+lng_pair: id_datastructure_3
 # 제목 설정 (사용 언어로 작성)
-title: 자료구조 - 2 
+title: 자료구조 - 3 비선형 자료구조
 # 카테고리 설정 (1개)
 category: 개인공부
 # 태그 설정 ([태그1, 태그2, ...])
@@ -15,7 +15,7 @@ tags: [자료구조, 알고리즘]
 # 섬네일 이미지
 img: "https://user-images.githubusercontent.com/105165938/179442964-74ed7772-8a3b-4b1c-bee9-989a62bcda14.png" 
 # 작성 날짜 설정 (YYYY-MM-DD HH:MM:SS +0900)
-date: 2022-07-18 12:00:00 +0900
+date: 2022-07-26 12:00:00 +0900
 
 ################################### 게시 글 기타 정보 설정 ###################################
 # 댓글 비활성화 여부
@@ -40,9 +40,9 @@ use_math: true
 
 ---
 <!-- outline-start -->
-\[자료구조\] - 
+\[자료구조\] - 트리(힙, 이진트리, 이진탐색트리, 균형이진탐색트리), 그래프(DFS, BFS, 최단경로) 
 
 <!-- outline-end -->
 참고한 스승님 [클릭](https://www.youtube.com/watch?v=PIidtIBCjEg&list=PLsMufJgu5933ZkBCHS7bQTx0bncjwi4PK)
 
-## 4. 
+## . 
