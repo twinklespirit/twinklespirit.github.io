@@ -77,7 +77,9 @@ Constraints:<br>
 
 ## Problem 13. Construct Tree from Preorder and Inorder Traversal
 
-
+> 영어부터 살펴보자!<br>
+> * traversal: 순회
+> * 
 
 ### 1. Problem
 > 
